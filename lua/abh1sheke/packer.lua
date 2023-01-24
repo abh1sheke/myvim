@@ -12,8 +12,8 @@ return require('packer').startup(function(use)
 	}
 
 	use ({
-		"catppuccin/nvim", 
-		as = "catppuccin", 
+		"catppuccin/nvim",
+		as = "catppuccin",
 		config = function()
 			vim.cmd("colorscheme catppuccin")
 		end
@@ -25,7 +25,7 @@ return require('packer').startup(function(use)
 	use ('mbbill/undotree' )
 
 	use( 'tpope/vim-fugitive' )
-	
+
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v1.x',
