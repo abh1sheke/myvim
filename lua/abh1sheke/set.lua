@@ -27,3 +27,4 @@ vim.opt.scrolloff = 4
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
+vim.g.mapleader = " "
