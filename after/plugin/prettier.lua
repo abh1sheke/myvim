@@ -16,6 +16,7 @@ prettier.setup({
         "yaml",
         "svelte",
         "astro",
+        "tailwindcss",
     },
     ["null-ls"] = {
         condition = function()
