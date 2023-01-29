@@ -17,6 +17,7 @@ lsp.ensure_installed({
 	'taplo',
 	'svelte',
 	'clangd',
+    'astro',
 })
 
 lsp.configure('sumneko_lua', {
