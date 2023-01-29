@@ -4,13 +4,11 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
-
     use({
         "catppuccin/nvim",
         as = "catppuccin",
@@ -18,14 +16,10 @@ return require('packer').startup(function(use)
             vim.cmd("colorscheme catppuccin")
         end
     })
-
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use('theprimeagen/harpoon')
-
     use('mbbill/undotree')
-
     use('tpope/vim-fugitive')
-
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
@@ -46,7 +40,6 @@ return require('packer').startup(function(use)
             { 'rafamadriz/friendly-snippets' },
         }
     }
-
     -- Prettier deps
     use('jose-elias-alvarez/null-ls.nvim')
     use('MunifTanjim/prettier.nvim')
@@ -57,7 +50,9 @@ return require('packer').startup(function(use)
             require('gitsigns').setup()
         end
     }
-
     use('lukas-reineke/indent-blankline.nvim')
-
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
 end)
