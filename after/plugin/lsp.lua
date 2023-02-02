@@ -30,7 +30,6 @@ lsp.configure('sumneko_lua', {
     }
 })
 
-local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
@@ -39,10 +38,6 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<C-y>'] = cmp.mapping.confirm({ select = true }),
   ["<C-Space>"] = cmp.mapping.complete(),
 })
-cmp.event:on(
-    'confirm_done',
-    cmp_autopairs.on_confirm_done()
-)
 
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
