@@ -9,13 +9,7 @@ return require('packer').startup(function(use)
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
-    use({
-        "catppuccin/nvim",
-        as = "catppuccin",
-        config = function()
-            vim.cmd("colorscheme catppuccin")
-        end
-    })
+    use("rebelot/kanagawa.nvim")
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
