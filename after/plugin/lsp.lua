@@ -7,7 +7,7 @@ lsp.nvim_workspace()
 lsp.ensure_installed({
 	'tsserver',
 	'eslint',
-	'sumneko_lua',
+    'lua_ls',
 	'rust_analyzer',
 	'tailwindcss',
 	'cssls',
@@ -20,7 +20,7 @@ lsp.ensure_installed({
     'astro',
 })
 
-lsp.configure('sumneko_lua', {
+lsp.configure('lua_ls', {
     settings = {
         Lua = {
             diagnostics = {
